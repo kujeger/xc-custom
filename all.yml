@@ -2,29 +2,6 @@
 - hosts: all
   roles:
 
-  # osx config
-#  - role: dock
-#    apps:
-#    - /Applications/Firefox.app
-#    - /Applications/Airmail.app
-#    - /Applications/Dashlane.app
-#    - /Applications/Spotify.app
-#    - /Applications/Airmail.app
-#    - "/Applications/Adobe Photoshop CC/Adobe Photoshop CC.app"
-#    - "/Applications/Adobe Illustrator CC/Adobe Illustrator.app"
-#    - /Applications/Atom.app
-#    - /Applications/iTerm.app
-#    - /Applications/Dash.app
-#    folders:
-#    - path: ~/
-#    - path: ~/Documents
-#    - path: ~/Downloads
-#      sort: datemodified
-#  - role: cask_package
-#    package_name: asepsis
-#  - role: dashboard
-#    disabled: YES
-
   # fonts
 #  - role: cask_package
 #    tap: caskroom/fonts
@@ -69,3 +46,61 @@
   ## text editors
 #  - role: cask_package
 #    package_name: atom
+  - role: cask_package
+    package_name: firefox
+  - role: cask_package
+    package_name: iterm2
+  - role: cask_package
+    package_name: github
+  - role: cask_package
+    package_name: skype
+  - role: cask_package
+    package_name: slack
+  - role: cask_package
+    package_name: textwrangler
+  - role: cask_package
+    package_name: gimp
+  - role: cask_package
+    package_name: spotify
+  - role: cask_package
+    package_name: keepassx
+  - role: cask_package
+    package_name: adium
+  - role: cask_package
+    package_name: vlc
+  - role: cask_package
+    package_name: seafile-client
+
+  # osx config
+  - role: dock
+    apps:
+    - /Applications/Mail.app
+    - /Applications/Calendar.app
+    - /Applications/Firefox.app
+    - /Applications/Safari.app
+    - /Applications/Adium.app
+    - /Applications/Skype.app
+    - /Applications/Slack.app
+    - /Applications/TextWrangler.app
+    - /Applications/GitHub.app
+    - /Applications/iTerm.app
+    - /Applications/System\ Preferences.app
+    - /Applications/KeePassX.app
+    - /Applications/Spotify.app
+    - /Applications/VLC.app
+#    - /Applications/Airmail.app
+#    - /Applications/Dashlane.app
+#    - /Applications/Airmail.app
+#    - /Applications/Atom.app
+#    - /Applications/Dash.app
+    folders:
+#    - path: ~/
+    - path: /Applications
+#    - path: ~/Documents
+    - path: ~/Downloads
+      sort: datemodified
+#  - role: cask_package
+#    package_name: asepsis
+  - role: dashboard
+    disabled: YES
+
