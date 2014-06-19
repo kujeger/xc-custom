@@ -53,8 +53,6 @@
   - role: cask_package
     package_name: github
   - role: cask_package
-    package_name: skype
-  - role: cask_package
     package_name: slack
   - role: cask_package
     package_name: textwrangler
